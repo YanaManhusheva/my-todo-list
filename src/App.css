@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+.App_inner {
+  margin: 20px;
+}
+.todoList-label {
+  font-size: 40px;
+  font-weight: 200;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todoList-numberTasks {
+  color: #2225a2;
+  font-size: 20px;
+  margin: 5px 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todoList-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 550px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.todoList-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.todoList-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.todoList-input {
+  width: 400px;
+  height: 40px;
+  font-size: 22px;
+}
+.todoList-btn {
+  font-size: 22px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #2225a2;
+  border: 0;
+  color: #fff;
+  font-weight: 100;
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+.todoList-btn:hover {
+  color: #2225a2;
+  background-color: #fff;
+}
+.todoList-filters {
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoList-filterBtn {
+  width: 120px;
+  font-size: 20px;
+  height: 30px;
+}
+
+.todoList-tasks {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.todoList-item {
+  border: 1px solid #2225a2;
+  margin-top: 20px;
+}
+
+.todoList-iten-inner {
+  display: flex;
+  padding: 10px 10px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 27px;
+}
+
+.todoList-item-btn {
+  color: #2225a2;
+  background-color: #fff;
+  width: 70px;
+  border-radius: 6px;
+  font-size: 18px;
+  margin: 0 0 0 6px;
+  height: 25px;
+  font-weight: 500;
+}
+.todoList-item-btn:hover {
+  border: 1.3px solid #2225a2;
+  transition: all ease-in-out 200ms;
+}
+.todoList-description {
+  margin: 2px 0 0;
+  font-size: 17px;
+}
+.todoList-task-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todoList-item-select {
+  margin-top: 10px;
+  width: 140px;
+  font-size: 17px;
+  text-align: center;
+  border: 0;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+.todoList-item-select option {
+  background-color: #fff;
+  color: #2225a2;
+}
+
+.open-btn {
+  background-color: #c61621;
+}
+.inprogress-btn {
+  background-color: #c65516;
+}
+.done-btn {
+  background-color: #108b3a;
+}
+
+.todoList-sort-select {
+  border-radius: 6px;
+  margin-top: 20px;
+  width: 260px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  border: 0;
+  color: #fff;
+  background-color: #2225a2;
+  font-family: "Raleway", sans-serif;
+}
+
+.todoList-edit-input {
+  border: #2225a2;
+  height: 25px;
+  font-size: 22px;
+  width: 220px;
+  margin-left: 5px;
+}
+.todoList-label + .todoList-label {
+  margin: 10px;
+}
+
+.todoList-edit-label {
+  font-size: 17px;
+  color: #2225a2;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
 }

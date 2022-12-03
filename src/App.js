@@ -22,10 +22,8 @@ function App() {
     <FilterButton key={name} name={name} setFilter={setFilter} />
   ));
   function ChangeStatus(e, id) {
-    console.log(e);
     const updatedTasks = tasks.map((item) => {
       if (item.id === id) {
-        console.log({ ...item, status: e });
         return {
           ...item,
           status: e,
@@ -60,7 +58,7 @@ function App() {
     let newTask = {
       id: `item-${nanoid()}`,
       title: name,
-      description: "go to a shop",
+      description: "",
       status: "Open",
       creationDate: new Date().toLocaleString(),
       updateDate: new Date().toLocaleString(),
@@ -91,6 +89,7 @@ function App() {
   function toggleComplete(id) {
     const updatedArr = tasks.map((item) => {
       if (item.id === id) {
+        console.log(item.status);
         if (item.status === "Open" || item.status === "In Progress") {
           return {
             ...item,
@@ -104,10 +103,12 @@ function App() {
             updateDate: new Date().toLocaleString(),
           };
         }
+        console.log(item.status);
       }
       return item;
     });
     setTasks(updatedArr);
+    console.log(updatedArr);
   }
   function sortList(sort) {
     console.log(sort);

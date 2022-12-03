@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 export default function TodoItem(props) {
+  console.log("todoList render");
   const [isEditing, setIsEditing] = useState(false);
-  const [newName, setNewName] = useState("");
-  const [newDescr, setNewDescr] = useState("");
+  const [newName, setNewName] = useState(props.item.title);
+  const [newDescr, setNewDescr] = useState(props.item.description);
 
   const STATUS = {
     Open: false,
@@ -57,8 +58,10 @@ export default function TodoItem(props) {
           className={`todoList-item-btn todoList-item-select ${props.item.status
             .toLowerCase()
             .replaceAll(" ", "")}-btn `}
+          value={props.item.status}
         >
-          <option value="">{props.item.status}</option>
+          {console.log(props.item.status)}
+          <option>{props.item.status}</option>
           <option>Open</option>
           <option>In Progress</option>
           <option>Done</option>
